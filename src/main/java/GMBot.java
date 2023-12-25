@@ -20,24 +20,37 @@ public class GMBot implements EventListener
                 .setActivity(randomActivity())
                 .build();                                               // Build Bot
 
+        // Re-set bot activity every hour
+        new Timer().schedule(new TimerTask(){
+            public void run(){
+                jda.getPresence().setActivity(randomActivity());
+            }},0,3600_000);
+
         jda.awaitReady();   // Wait until jda is ready
     }
 
     private static final ArrayList<Activity> activities = new ArrayList<>();
 
     private static void generateActivities() {
-        activities.add(Activity.watching("Planet of Apes"));
-        activities.add(Activity.playing("Jenshin"));
-        activities.add(Activity.playing("HSR"));
-        activities.add(Activity.playing("with DJ Ape"));
+        // watching
+        activities.add(Activity.watching("planet of apes"));
+        activities.add(Activity.watching("tarzan"));
+        // playing
+        activities.add(Activity.playing("jenshin"));
+        activities.add(Activity.playing("with dj ape"));
         activities.add(Activity.playing("with banana"));
-        activities.add(Activity.playing("with banana"));
-        activities.add(Activity.competing("with DJ Ape"));
+        // listening to
+        activities.add(Activity.listening("miss yun"));
+        activities.add(Activity.listening("lady furiri"));
+        activities.add(Activity.listening("neesama uwaauwaa"));
+        // competing in
+        activities.add(Activity.competing("apes fight"));
+        activities.add(Activity.competing("food fight"));
     }
 
     private static Activity randomActivity()
     {
-        Random rand = new Random();
+        Random rand = new Random(System.currentTimeMillis());
         int length = activities.size();
         return activities.get(rand.nextInt(length));
     }
