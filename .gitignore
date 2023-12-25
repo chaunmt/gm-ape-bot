@@ -26,5 +26,8 @@ replay_pid*
 # Key
 .env
 
+# Libraries
+/node_modules/
+
 # Self Document
 /info/

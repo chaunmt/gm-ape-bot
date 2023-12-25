@@ -1,0 +1,51 @@
+{
+  "game" : "Valheim",
+  "mods" : {
+    "required" : [
+      {
+        "name" : "PlantEverything",
+        "author" : "Advize",
+        "url" : "https://valheim.thunderstore.io/package/Advize/PlantEverything/",
+      },
+      {
+        "name" : "InfiniteTorches",
+        "author" : "Frogger",
+        "url" : "https://valheim.thunderstore.io/package/Frogger/InfiniteTorches/",
+      },
+      {
+        "name" : "Leash",
+        "author" : "CookieMilk",
+        "url" : "https://valheim.thunderstore.io/package/CookieMilk/Leash/",
+      }
+    ],
+    "suggested" : [
+      {
+        "name" : "PlantEasily",
+        "author" : "Advize",
+        "url" : "https://valheim.thunderstore.io/package/Advize/PlantEasily/",
+      },
+      {
+        "name" : "EquipmentAndQuickSlots",
+        "author" : "RandyKnapp",
+        "url" : "https://valheim.thunderstore.io/package/RandyKnapp/EquipmentAndQuickSlots/",
+      },
+      {
+        "name" : "CraftFromContainers",
+        "author" : "aedenthorn_mods",
+        "url" : "https://valheim.thunderstore.io/package/aedenthorn_mods/CraftFromContainers/",
+      },
+      {
+        "name" : "AAA_Crafting",
+        "author" : "Azumatt",
+        "url" : "https://valheim.thunderstore.io/package/Azumatt/AAA_Crafting/",
+      }
+    ],
+    "stopped" : [
+      {
+        "name" : "AutoFeed",
+        "author" : "ALY",
+        "url" : "https://valheim.thunderstore.io/package/ALY/AutoFeed/",
+      }
+    ]
+  }
+}
