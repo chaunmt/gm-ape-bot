@@ -9,21 +9,34 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.*;
 import java.io.FileReader;
+import java.util.*;
 
 public class SlashCommandHandler extends ListenerAdapter
 {
     public void onReady(ReadyEvent event)
     {
-        event.getJDA().updateCommands()
+//        // Delete old global commands
+//        event.getJDA()
+//                .updateCommands()
+//                .queue();
+//        // Delete old guild commands
+//        Objects.requireNonNull(event.getJDA().getGuildById("884490415208804392"))
+//                .updateCommands()
+//                .queue();
+
+        // Update guild commands
+        Objects.requireNonNull(event.getJDA().getGuildById("884490415208804392"))
+                .updateCommands()
                 .addCommands(
                         Commands.slash("ping", "how is ape doing?"),
-//                        Commands.slash("game", "what games will ape play?")
-//                                .addOption(OptionType.BOOLEAN, "random", "pick me a game to play"),
-//                        Commands.slash("test", "test"),
+                        Commands.slash("game", "what games will ape play?")
+                                .addOption(OptionType.BOOLEAN, "random", "pick me a game to play", true),
                         Commands.slash("valheim", "apes in valhalla"),
                         Commands.slash("greenhell", "apes running from aneh pepo")
                 )
                 .queue();
+
+
     }
 
     @Override
@@ -34,8 +47,20 @@ public class SlashCommandHandler extends ListenerAdapter
                     event.reply(event.getJDA().getGatewayPing() + " ms da").queue();
             case "game" ->
             {
-//                System.out.println(event.getOptionsByName("random").get(0));
-                event.reply("Game");
+                ArrayList<String> games = generateGames();
+                if (event.getOptionsByName("random").get(0).getAsBoolean())
+                {
+                    Random rand = new Random(System.currentTimeMillis());
+                    event.reply(games.get(rand.nextInt(games.size()))).queue();
+                }
+                else
+                {
+                    StringBuilder rep = new StringBuilder();
+                    for (int i = 0; i < games.size(); i++)
+                        rep.append(i).append(". ")
+                                .append(games.get(i)).append("\n");
+                    event.reply(rep.toString()).queue();
+                }
             }
             case "valheim" ->
             {
@@ -59,7 +84,18 @@ public class SlashCommandHandler extends ListenerAdapter
         }
     }
 
-    private static StringBuilder getStringFromJson(JSONObject obj, String mod_type)
+    private ArrayList<String> generateGames()
+    {
+        ArrayList<String> games = new ArrayList<>();
+        games.add("Valheim");
+        games.add("Green Hell");
+        games.add("Sons of the Forest");
+        games.add("Monster Hunter: World");
+        games.add("Jenshin Impact");
+        games.add("Honkai: Star Rail");
+        return games;
+    }
+    private StringBuilder getStringFromJson(JSONObject obj, String mod_type)
     {
         JSONArray mods = (obj.getJSONObject("mods")).getJSONArray(mod_type);
 
@@ -83,7 +119,7 @@ public class SlashCommandHandler extends ListenerAdapter
         return allMods;
     }
 
-    private static JSONObject getJsonData(String link)
+    private JSONObject getJsonData(String link)
     {
         try
         {

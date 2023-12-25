@@ -37,13 +37,13 @@ public class GMBot implements EventListener
         activities.add(Activity.watching("tarzan"));
         activities.add(Activity.watching("apes fight"));
         activities.add(Activity.watching("lady furiri"));
-        activities.add(Activity.watching("neesama uwaauwaa"));
         // playing
         activities.add(Activity.playing("jenshin"));
         activities.add(Activity.playing("with dj ape"));
         activities.add(Activity.playing("with banana"));
         // listening to
         activities.add(Activity.listening("miss yun"));
+        activities.add(Activity.listening("uwaauwaa"));
         // competing in
         activities.add(Activity.competing("food fight"));
     }
@@ -51,7 +51,6 @@ public class GMBot implements EventListener
     private static Activity randomActivity()
     {
         Random rand = new Random(System.currentTimeMillis());
-        int length = activities.size();
-        return activities.get(rand.nextInt(length));
+        return activities.get(rand.nextInt(activities.size()));
     }
 }
