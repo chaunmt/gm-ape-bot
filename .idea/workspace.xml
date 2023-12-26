@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="levan can have coffee now">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/apache_maven_plugins_shade_plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/codehaus_mojo_exec_maven_plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="gm ape can now be built in terminal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GMBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainFile/GMBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainFile/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainFile/RandomGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mainFile/SlashCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703584627354</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="gm ape can now be built in terminal">
+      <created>1703612257424</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1703612257424</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +211,7 @@
     <MESSAGE value="buy me a coffee ape" />
     <MESSAGE value="fix redundant assign" />
     <MESSAGE value="levan can have coffee now" />
-    <option name="LAST_COMMIT_MESSAGE" value="levan can have coffee now" />
+    <MESSAGE value="gm ape can now be built in terminal" />
+    <option name="LAST_COMMIT_MESSAGE" value="gm ape can now be built in terminal" />
   </component>
 </project>
