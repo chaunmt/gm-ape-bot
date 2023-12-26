@@ -1,4 +1,5 @@
 import io.github.cdimascio.dotenv.Dotenv;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
@@ -36,6 +37,8 @@ public class SlashCommandHandler extends ListenerAdapter
         Objects.requireNonNull(event.getJDA().getGuildById(THE_APES_GUILD_ID))
                 .updateCommands()
                 .addCommands(
+                        Commands.slash("hello", "say hello to ape"),
+                        Commands.slash("goodbye", "say goodbye to ape"),
                         Commands.slash("ping", "how is ape doing?"),
                         Commands.slash("game", "what games will ape play?")
                                 .addOption(OptionType.BOOLEAN, "random", "pick me a game to play", true),
@@ -50,6 +53,10 @@ public class SlashCommandHandler extends ListenerAdapter
     public void onSlashCommandInteraction(SlashCommandInteractionEvent event)
     {
         switch (event.getName()) {
+            case "hello" ->
+                    event.reply(RandomEmoji(generateFunEmoji())).queue();
+            case "goodbye" ->
+                    event.reply(RandomEmoji(generateSadEmoji())).queue();
             case "ping" ->
                     event.reply(event.getJDA().getGatewayPing() + " ms da").queue();
             case "game" ->
@@ -87,11 +94,16 @@ public class SlashCommandHandler extends ListenerAdapter
                     event.reply("Apes will go to green hell soon!").queue();
             case "dadjoke" ->
             {
-                try {
-                    event.reply(DadJokeReader() + "\n" + RandomFunEmoji()).queue();
-                } catch (IOException e) {
+                try
+                {
+                    event.reply(DadJokeReader()).queue();
+                    event.getHook().sendMessage(RandomEmoji(generateFunEmoji())).queue();
+                }
+                catch (IOException e)
+                {
                     throw new RuntimeException(e);
                 }
+
             }
             default ->
                     event.reply("Me don't know that").queue();
@@ -118,11 +130,17 @@ public class SlashCommandHandler extends ListenerAdapter
         return "Me can't find any dad joke :(";
     }
 
-    private String RandomFunEmoji()
+    private String RandomEmoji(ArrayList<String> emoji)
+    {
+        Random rand = new Random(System.currentTimeMillis());
+        return emoji.get(rand.nextInt(emoji.size()));
+    }
+
+    private ArrayList<String> generateFunEmoji()
     {
         ArrayList<String> funEmoji = new ArrayList<>();
-        funEmoji.add("<:Neesama_uwaauwaa:1181005202686480484>");
         funEmoji.add("<:oneesama_bleh:1110748595294056479>");
+        funEmoji.add("<:Neesama_uwaauwaa:1181005202686480484>");
         funEmoji.add("<:Venti_yey:1181009539009630331>");
         funEmoji.add("<:Kokomi_think:1181011128076214303>");
         funEmoji.add("<:Lynette_spark:1181006569903759431>");
@@ -135,10 +153,25 @@ public class SlashCommandHandler extends ListenerAdapter
         funEmoji.add("<:jean_praise:1028892495444185200>");
         funEmoji.add("<:ganyu_pray:1007813723194404924>");
         funEmoji.add("<:ganyu_smile:1007617852687253524>");
+        return funEmoji;
+    }
 
-        Random rand = new Random(System.currentTimeMillis());
-
-        return funEmoji.get(rand.nextInt(funEmoji.size()));
+    private ArrayList<String> generateSadEmoji()
+    {
+        ArrayList<String> sadEmoji = new ArrayList<>();
+        sadEmoji.add("<:amber_saveme:1007813718479994941>");
+        sadEmoji.add("<:March_7th_cry:1181005498779181147>");
+        sadEmoji.add("<:kazoo_cri:1103271610162622534>");
+        sadEmoji.add("<:Alhai_ughh:1181008931829596171>");
+        sadEmoji.add("<:beidou_bye:1007813720128364625>");
+        sadEmoji.add("<:ganyu_stare:1007605047577804900>");
+        sadEmoji.add("<:layla_cri:1075322926670295070>");
+        sadEmoji.add("<:keqing_mad:1007813002805919765>");
+        sadEmoji.add("<:klee_shame:1007650909406380052>");
+        sadEmoji.add("<:pain:1007616053939028048>");
+        sadEmoji.add("<:qiqi_deadinside:1007643996329345055>");
+        sadEmoji.add("<:xiao_deadinside:1007609464758743204>");
+        return sadEmoji;
     }
 
     private ArrayList<String> generateGames()
