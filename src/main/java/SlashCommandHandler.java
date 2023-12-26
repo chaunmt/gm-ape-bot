@@ -211,7 +211,7 @@ public class SlashCommandHandler extends ListenerAdapter
                     if (event.getOptionsByName("levan").size() > 0)
                     {
                         if (event.getOptionsByName("levan").get(0).getAsBoolean())
-                            donateMsg.append("levan doesn't need coffee\n");
+                            donateMsg.append("https://www.buymeacoffee.com/syukurm\n");
                         else
                             donateMsg.append("no coffee for levan\n");
                     }
