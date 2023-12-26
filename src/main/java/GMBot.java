@@ -3,6 +3,7 @@ import net.dv8tion.jda.api.JDABuilder;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.requests.GatewayIntent;
 
 import java.util.*;
 
@@ -17,6 +18,8 @@ public class GMBot implements EventListener
         generateActivities();
         JDA jda = JDABuilder.createDefault(GM_APE_TOKEN)                // Create Bot
                 .addEventListeners(new SlashCommandHandler())           // Slash Command
+                .enableIntents(GatewayIntent.MESSAGE_CONTENT)
+                .addEventListeners(new MessageHandler())
                 .setActivity(randomActivity())
                 .build();                                               // Build Bot
 

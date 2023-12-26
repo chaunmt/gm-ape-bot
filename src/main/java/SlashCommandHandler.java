@@ -212,13 +212,13 @@ public class SlashCommandHandler extends ListenerAdapter
         return "Me can't find any dad joke :(";
     }
 
-    private String RandomEmoji(ArrayList<String> emoji)
+    public String RandomEmoji(ArrayList<String> emoji)
     {
         Random rand = new Random(System.currentTimeMillis());
         return emoji.get(rand.nextInt(emoji.size()));
     }
 
-    private ArrayList<String> generateFunEmoji()
+    public ArrayList<String> generateFunEmoji()
     {
         ArrayList<String> funEmoji = new ArrayList<>();
         funEmoji.add("<:oneesama_bleh:1110748595294056479>");
@@ -238,7 +238,7 @@ public class SlashCommandHandler extends ListenerAdapter
         return funEmoji;
     }
 
-    private ArrayList<String> generateSadEmoji()
+    public ArrayList<String> generateSadEmoji()
     {
         ArrayList<String> sadEmoji = new ArrayList<>();
         sadEmoji.add("<:amber_saveme:1007813718479994941>");
