@@ -50,7 +50,12 @@ public class SlashCommandHandler extends ListenerAdapter
                                 .addOption(OptionType.STRING, "question",
                                         "give it a question", true)
                                 .addOption(OptionType.STRING, "choices",
-                                        "give it choices separated by a comma", false)
+                                        "give it choices separated by a comma", false),
+                        Commands.slash("donate", "buy me a coffee")
+                                .addOption(OptionType.BOOLEAN, "katsu",
+                                        "buy katsu a coffee", false)
+                                .addOption(OptionType.BOOLEAN, "levan",
+                                        "buy levan a coffee", false)
                 )
                 .queue();
     }
@@ -186,6 +191,32 @@ public class SlashCommandHandler extends ListenerAdapter
                 }
                 else
                     event.getHook().sendMessage("That's too many choices, narrow it down").queue();
+            }
+            case "donate" ->
+            {
+                if (event.getOptionsByName("katsu").size() == 0 && event.getOptionsByName("levan").size() == 0)
+                {
+                    event.reply("https://www.buymeacoffee.com").queue();
+                }
+                    else
+                {
+                    StringBuilder donateMsg = new StringBuilder();
+                    if (event.getOptionsByName("katsu").size() > 0)
+                    {
+                        if (event.getOptionsByName("katsu").get(0).getAsBoolean())
+                            donateMsg.append("https://www.buymeacoffee.com/kittokatsu\n");
+                        else
+                            donateMsg.append("no coffee for katsu\n");
+                    }
+                    if (event.getOptionsByName("levan").size() > 0)
+                    {
+                        if (event.getOptionsByName("levan").get(0).getAsBoolean())
+                            donateMsg.append("levan doesn't need coffee\n");
+                        else
+                            donateMsg.append("no coffee for levan\n");
+                    }
+                    event.reply(String.valueOf(donateMsg)).queue();
+                }
             }
             default ->
                     event.reply("Me don't know that").queue();

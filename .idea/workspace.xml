@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="ape can do simple poll">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MessageHandler.java" afterDir="false" />
+    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="ape can reply to mention and &quot;is it true that&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/RandomGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GMBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GMBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SlashCommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703575382823</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="ape can reply to mention and &quot;is it true that&quot;">
+      <created>1703579770631</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1703579770631</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,6 +172,7 @@
     <MESSAGE value="gm ape can send big emoji" />
     <MESSAGE value="fix some small typo" />
     <MESSAGE value="ape can do simple poll" />
-    <option name="LAST_COMMIT_MESSAGE" value="ape can do simple poll" />
+    <MESSAGE value="ape can reply to mention and &quot;is it true that&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="ape can reply to mention and &quot;is it true that&quot;" />
   </component>
 </project>

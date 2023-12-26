@@ -10,11 +10,11 @@ public class MessageHandler extends ListenerAdapter
         String msg = event.getMessage().getContentDisplay();
         if (msg.contains("@GM Ape"))
         {
-            event.getChannel().sendMessage("you call?").queue();
+            event.getChannel().sendMessage("you call?").setMessageReference(event.getMessageId()).queue();
         }
         if (msg.toLowerCase().contains("is it true that"))
         {
-            event.getChannel().sendMessage(RandomYesNo()).queue();
+            event.getChannel().sendMessage(RandomYesNo()).setMessageReference(event.getMessageId()).queue();
         }
     }
 
