@@ -121,7 +121,7 @@ public class SlashCommandHandler extends ListenerAdapter
                 event.deferReply().queue();
 
                 String question = event.getOptionsByName("question").get(0).getAsString();
-                String choices = new String();
+                String choices;
                 if (event.getOptionsByName("choices").size() != 0)
                     choices = event.getOptionsByName("choices").get(0).getAsString();
                 else choices = "Yes, No";
