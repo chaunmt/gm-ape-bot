@@ -24,6 +24,8 @@ mvn clean install
 mvn exec:java
 ```
 
+Note: maven compiler source and target in pom.xml can be changed into other jdk version as need.
+
 ## 📍 Require
 + Discord API Key.
 + Discord Guild ID.
