@@ -1,4 +1,6 @@
 import io.github.cdimascio.dotenv.Dotenv;
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -8,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 
+import java.awt.*;
 import java.io.*;
 import java.io.FileReader;
 import java.net.URL;
@@ -38,10 +41,16 @@ public class SlashCommandHandler extends ListenerAdapter
                         Commands.slash("goodbye", "say goodbye to ape"),
                         Commands.slash("ping", "how is ape doing?"),
                         Commands.slash("game", "what games will ape play?")
-                                .addOption(OptionType.BOOLEAN, "random", "pick me a game to play", true),
+                                .addOption(OptionType.BOOLEAN, "random",
+                                        "pick me a game to play", true),
                         Commands.slash("valheim", "apes in valhalla"),
                         Commands.slash("greenhell", "apes running from aneh pepo"),
-                        Commands.slash("dadjoke", "give me a dad joke kek")
+                        Commands.slash("dadjoke", "give me a dad joke kek"),
+                        Commands.slash("poll", "let ape help you make a poll")
+                                .addOption(OptionType.STRING, "question",
+                                        "give it a question", true)
+                                .addOption(OptionType.STRING, "choices",
+                                        "give it choices separated by a comma", false)
                 )
                 .queue();
     }
@@ -101,6 +110,82 @@ public class SlashCommandHandler extends ListenerAdapter
                     throw new RuntimeException(e);
                 }
 
+            }
+            case "poll" ->
+            {
+                event.deferReply().queue();
+
+                String question = event.getOptionsByName("question").get(0).getAsString();
+                String choices = new String();
+                if (event.getOptionsByName("choices").size() != 0)
+                    choices = event.getOptionsByName("choices").get(0).getAsString();
+                else choices = "Yes, No";
+
+                EmbedBuilder embedMsg = new EmbedBuilder();
+                embedMsg.setTitle(question);
+                embedMsg.setColor(Color.CYAN);
+                embedMsg.setDescription("Let's vote");
+
+                String[] choicesArr = choices.split(",");
+                if (choicesArr.length == 0)
+                {
+                    event.getHook().sendMessage("Give me choices").queue();
+                }
+                    else
+                if (choicesArr.length == 1)
+                {
+                    event.getHook().sendMessage("Be more democracy, you sussy baka").queue();
+                }
+                    else
+                if (choicesArr.length == 2)
+                {
+                    embedMsg.addField(":thumbsup: Yes", "\n", false);
+                    embedMsg.addField(":thumbsdown: No", "\n", false);
+
+                    event.getHook().sendMessageEmbeds(embedMsg.build()).queue(msg ->
+                    {
+                        msg.addReaction(Emoji.fromUnicode("U+1F44D")).queue();
+                        msg.addReaction(Emoji.fromUnicode("U+1F44E")).queue();
+                    });
+                }
+                    else
+                if (choicesArr.length <= 10)
+                {
+                    ArrayList<String> voteReactions = new ArrayList<>();
+                    voteReactions.add(":one:");
+                    voteReactions.add(":two:");
+                    voteReactions.add(":three:");
+                    voteReactions.add(":four:");
+                    voteReactions.add(":five:");
+                    voteReactions.add(":six:");
+                    voteReactions.add(":seven:");
+                    voteReactions.add(":eight:");
+                    voteReactions.add(":nine:");
+                    voteReactions.add(":keycap_ten:");
+
+                    ArrayList<String> unicodeReactions = new ArrayList<>();
+                    unicodeReactions.add("U+0031 U+20E3");
+                    unicodeReactions.add("U+0032 U+20E3");
+                    unicodeReactions.add("U+0033 U+20E3");
+                    unicodeReactions.add("U+0034 U+20E3");
+                    unicodeReactions.add("U+0035 U+20E3");
+                    unicodeReactions.add("U+0036 U+20E3");
+                    unicodeReactions.add("U+0037 U+20E3");
+                    unicodeReactions.add("U+0038 U+20E3");
+                    unicodeReactions.add("U+0039 U+20E3");
+                    unicodeReactions.add("U+1F51F");
+
+                    for (int i = 0; i < choicesArr.length; i++)
+                        embedMsg.addField(voteReactions.get(i) + " " + choicesArr[i], "\n", false);
+//                    event.replyEmbeds(embedMsg.build()).queue();
+                    event.getHook().sendMessageEmbeds(embedMsg.build()).queue(msg ->
+                    {
+                        for (int i = 0; i < choicesArr.length; i++)
+                            msg.addReaction(Emoji.fromUnicode(unicodeReactions.get(i))).queue();
+                    });
+                }
+                else
+                    event.getHook().sendMessage("That's too many choices, narrow it down").queue();
             }
             default ->
                     event.reply("Me don't know that").queue();

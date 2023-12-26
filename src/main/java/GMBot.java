@@ -37,6 +37,7 @@ public class GMBot implements EventListener
         activities.add(Activity.watching("tarzan"));
         activities.add(Activity.watching("apes fight"));
         activities.add(Activity.watching("lady furiri"));
+        activities.add(Activity.watching("life flows by"));
         // playing
         activities.add(Activity.playing("jenshin"));
         activities.add(Activity.playing("with dj ape"));
