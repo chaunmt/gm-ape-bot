@@ -1,3 +1,5 @@
+import io.github.cdimascio.dotenv.Dotenv;
+import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -9,12 +11,18 @@ import org.json.simple.parser.JSONParser;
 
 import java.io.*;
 import java.io.FileReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLConnection;
 import java.util.*;
 
 public class SlashCommandHandler extends ListenerAdapter
 {
     public void onReady(ReadyEvent event)
     {
+        Dotenv dotenv = Dotenv.load();                                  // Load API
+        String THE_APES_GUILD_ID = dotenv.get("THE_APES_GUILD_ID");
+
 //        // Delete old global commands
 //        event.getJDA()
 //                .updateCommands()
@@ -25,18 +33,17 @@ public class SlashCommandHandler extends ListenerAdapter
 //                .queue();
 
         // Update guild commands
-        Objects.requireNonNull(event.getJDA().getGuildById("884490415208804392"))
+        Objects.requireNonNull(event.getJDA().getGuildById(THE_APES_GUILD_ID))
                 .updateCommands()
                 .addCommands(
                         Commands.slash("ping", "how is ape doing?"),
                         Commands.slash("game", "what games will ape play?")
                                 .addOption(OptionType.BOOLEAN, "random", "pick me a game to play", true),
                         Commands.slash("valheim", "apes in valhalla"),
-                        Commands.slash("greenhell", "apes running from aneh pepo")
+                        Commands.slash("greenhell", "apes running from aneh pepo"),
+                        Commands.slash("dadjoke", "give me a dad joke kek")
                 )
                 .queue();
-
-
     }
 
     @Override
@@ -66,22 +73,72 @@ public class SlashCommandHandler extends ListenerAdapter
             {
                 JSONObject obj = getJsonData("data/valheim.json");
 
-                StringBuilder allMods = new StringBuilder();
+                String allMods =
+                        "Required mods : \n" +
+                        getModStringFromJson(obj, "required") +
+                        "\nSuggested mods : \n" +
+                        getModStringFromJson(obj, "suggested") +
+                        "\nStopped working mods : \n" +
+                        getModStringFromJson(obj, "stopped");
 
-                allMods.append("Required mods : \n");
-                allMods.append(getStringFromJson(obj, "required"));
-                allMods.append("\nSuggested mods : \n");
-                allMods.append(getStringFromJson(obj, "suggested"));
-                allMods.append("\nStopped working mods : \n");
-                allMods.append(getStringFromJson(obj, "stopped"));
-
-                event.reply(allMods.toString()).queue();
+                event.reply(allMods).queue();
             }
             case "greenhell" ->
                     event.reply("Apes will go to green hell soon!").queue();
+            case "dadjoke" ->
+            {
+                try {
+                    event.reply(DadJokeReader() + "\n" + RandomFunEmoji()).queue();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            }
             default ->
                     event.reply("Me don't know that").queue();
         }
+    }
+
+    private String DadJokeReader() throws IOException {
+        URL dadjoke = new URL("https://icanhazdadjoke.com/");
+        URLConnection dc = dadjoke.openConnection();
+
+        BufferedReader in = new BufferedReader(
+                new InputStreamReader(dc.getInputStream()));
+
+        String inputLine;
+        while ((inputLine = in.readLine()) != null)
+            if (inputLine.contains("<meta name=\"twitter:description\" content=\""))
+            {
+                inputLine = inputLine.replace("<meta name=\"twitter:description\" content=\"", "");
+                inputLine = inputLine.replace("\">", "");
+                return (inputLine);
+            }
+
+        in.close();
+        return "Me can't find any dad joke :(";
+    }
+
+    private String RandomFunEmoji()
+    {
+        ArrayList<String> funEmoji = new ArrayList<>();
+        funEmoji.add("<:Neesama_uwaauwaa:1181005202686480484>");
+        funEmoji.add("<:oneesama_bleh:1110748595294056479>");
+        funEmoji.add("<:Venti_yey:1181009539009630331>");
+        funEmoji.add("<:Kokomi_think:1181011128076214303>");
+        funEmoji.add("<:Lynette_spark:1181006569903759431>");
+        funEmoji.add("<:hutao_love:1007604545213444226>");
+        funEmoji.add("<:hutao_wink:1007606429970071624>");
+        funEmoji.add("<:hutao_greetings:1007813726298193930>");
+        funEmoji.add("<:Faruzan_smort:1181010143735980136>");
+        funEmoji.add("<:doggo_kek:1007615513217736775>");
+        funEmoji.add("<:tanuki_rolling:1007556411909230612>");
+        funEmoji.add("<:jean_praise:1028892495444185200>");
+        funEmoji.add("<:ganyu_pray:1007813723194404924>");
+        funEmoji.add("<:ganyu_smile:1007617852687253524>");
+
+        Random rand = new Random(System.currentTimeMillis());
+
+        return funEmoji.get(rand.nextInt(funEmoji.size()));
     }
 
     private ArrayList<String> generateGames()
@@ -95,7 +152,7 @@ public class SlashCommandHandler extends ListenerAdapter
         games.add("Honkai: Star Rail");
         return games;
     }
-    private StringBuilder getStringFromJson(JSONObject obj, String mod_type)
+    private StringBuilder getModStringFromJson(JSONObject obj, String mod_type)
     {
         JSONArray mods = (obj.getJSONObject("mods")).getJSONArray(mod_type);
 
