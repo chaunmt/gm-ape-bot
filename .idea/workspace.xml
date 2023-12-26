@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="random game slash command">
+    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="GM Ape can do dad joke now">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SlashCommandHandler.java" afterDir="false" />
     </list>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703502019186</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="GM Ape can do dad joke now">
+      <created>1703561460458</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1703561460458</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +138,7 @@
     <MESSAGE value="modify activity" />
     <MESSAGE value="slash command working: ping, mods" />
     <MESSAGE value="random game slash command" />
-    <option name="LAST_COMMIT_MESSAGE" value="random game slash command" />
+    <MESSAGE value="GM Ape can do dad joke now" />
+    <option name="LAST_COMMIT_MESSAGE" value="GM Ape can do dad joke now" />
   </component>
 </project>

@@ -1,4 +1,5 @@
 import io.github.cdimascio.dotenv.Dotenv;
+import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
 import net.dv8tion.jda.api.events.session.ReadyEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
@@ -87,7 +88,7 @@ public class SlashCommandHandler extends ListenerAdapter
             case "dadjoke" ->
             {
                 try {
-                    event.reply(DadJokeReader()).queue();
+                    event.reply(DadJokeReader() + "\n" + RandomFunEmoji()).queue();
                 } catch (IOException e) {
                     throw new RuntimeException(e);
                 }
@@ -110,11 +111,34 @@ public class SlashCommandHandler extends ListenerAdapter
             {
                 inputLine = inputLine.replace("<meta name=\"twitter:description\" content=\"", "");
                 inputLine = inputLine.replace("\">", "");
-                return inputLine;
+                return (inputLine);
             }
 
         in.close();
         return "Me can't find any dad joke :(";
+    }
+
+    private String RandomFunEmoji()
+    {
+        ArrayList<String> funEmoji = new ArrayList<>();
+        funEmoji.add("<:Neesama_uwaauwaa:1181005202686480484>");
+        funEmoji.add("<:oneesama_bleh:1110748595294056479>");
+        funEmoji.add("<:Venti_yey:1181009539009630331>");
+        funEmoji.add("<:Kokomi_think:1181011128076214303>");
+        funEmoji.add("<:Lynette_spark:1181006569903759431>");
+        funEmoji.add("<:hutao_love:1007604545213444226>");
+        funEmoji.add("<:hutao_wink:1007606429970071624>");
+        funEmoji.add("<:hutao_greetings:1007813726298193930>");
+        funEmoji.add("<:Faruzan_smort:1181010143735980136>");
+        funEmoji.add("<:doggo_kek:1007615513217736775>");
+        funEmoji.add("<:tanuki_rolling:1007556411909230612>");
+        funEmoji.add("<:jean_praise:1028892495444185200>");
+        funEmoji.add("<:ganyu_pray:1007813723194404924>");
+        funEmoji.add("<:ganyu_smile:1007617852687253524>");
+
+        Random rand = new Random(System.currentTimeMillis());
+
+        return funEmoji.get(rand.nextInt(funEmoji.size()));
     }
 
     private ArrayList<String> generateGames()
