@@ -4,9 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="update README.md">
+    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="divide classes into smaller classes">
+      <change afterPath="$PROJECT_DIR$/data/activities.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/emojis.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/games.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mybot/exapi/DadJoke.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mybot/helper/JSONHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mybot/helper/RandomGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/valheim.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/valheim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/GMBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/GMBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/RandomGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +66,7 @@
   </component>
   <component name="RunManager" selected="Application.GMBot">
     <configuration name="GMBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.GMBot" />
+      <option name="MAIN_CLASS_NAME" value="mybot.GMBot" />
       <module name="gm-ape-bot" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -190,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703613090244</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="update README.md">
+      <created>1703619385036</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1703619385036</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +238,7 @@
     <MESSAGE value="levan can have coffee now" />
     <MESSAGE value="gm ape can now be built in terminal" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="divide classes into smaller classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="divide classes into smaller classes" />
   </component>
 </project>

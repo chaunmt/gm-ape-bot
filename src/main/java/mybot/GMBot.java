@@ -1,11 +1,15 @@
-package mainFile;
+package mybot;
 
+import mybot.helper.JSONHandler;
+import mybot.helper.RandomGenerator;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
 import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.util.*;
 
@@ -37,26 +41,31 @@ public class GMBot implements EventListener
     private static final ArrayList<Activity> activities = new ArrayList<>();
 
     private static void generateActivities() {
-        // watching
-        activities.add(Activity.watching("planet of apes"));
-        activities.add(Activity.watching("tarzan"));
-        activities.add(Activity.watching("apes fight"));
-        activities.add(Activity.watching("lady furiri"));
-        activities.add(Activity.watching("life flows by"));
-        // playing
-        activities.add(Activity.playing("jenshin"));
-        activities.add(Activity.playing("with dj ape"));
-        activities.add(Activity.playing("with banana"));
-        // listening to
-        activities.add(Activity.listening("miss yun"));
-        activities.add(Activity.listening("uwaauwaa"));
-        // competing in
-        activities.add(Activity.competing("food fight"));
+        JSONObject obj = JSONHandler.getJSONObj("data/activities.json");
+        addActivitiesWithType(obj, "watching");
+        addActivitiesWithType(obj, "playing");
+        addActivitiesWithType(obj, "listening");
+        addActivitiesWithType(obj, "competing");
+        addActivitiesWithType(obj, "streaming");
+    }
+
+    private static void addActivitiesWithType(JSONObject obj, String type)
+    {
+        JSONArray arr = null;
+        arr = JSONHandler.getJSONArr(obj, new String[]{type});
+        for (int i = 0; i < arr.length(); i++)
+            if (type.equals("watching"))
+                activities.add(Activity.watching(arr.get(i).toString()));
+            else if (type.equals("playing"))
+                activities.add(Activity.playing(arr.get(i).toString()));
+            else if (type.equals("listening"))
+                activities.add(Activity.playing(arr.get(i).toString()));
+            else if (type.equals("competing"))
+                activities.add(Activity.playing(arr.get(i).toString()));
+            else if (type.equals("streaming"))
+                activities.add(Activity.streaming(arr.get(i).toString(), ""));
     }
 
     private static Activity randomActivity()
-    {
-        Random rand = new Random(System.currentTimeMillis());
-        return activities.get(rand.nextInt(activities.size()));
-    }
+    { return activities.get(RandomGenerator.getInt(activities.size())); }
 }
