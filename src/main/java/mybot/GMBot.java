@@ -54,16 +54,13 @@ public class GMBot implements EventListener
         JSONArray arr = null;
         arr = JSONHandler.getJSONArr(obj, new String[]{type});
         for (int i = 0; i < arr.length(); i++)
-            if (type.equals("watching"))
-                activities.add(Activity.watching(arr.get(i).toString()));
-            else if (type.equals("playing"))
-                activities.add(Activity.playing(arr.get(i).toString()));
-            else if (type.equals("listening"))
-                activities.add(Activity.listening(arr.get(i).toString()));
-            else if (type.equals("competing"))
-                activities.add(Activity.competing(arr.get(i).toString()));
-            else if (type.equals("streaming"))
-                activities.add(Activity.streaming(arr.get(i).toString(), ""));
+            switch (type) {
+                case "watching" -> activities.add(Activity.watching(arr.get(i).toString()));
+                case "playing" -> activities.add(Activity.playing(arr.get(i).toString()));
+                case "listening" -> activities.add(Activity.listening(arr.get(i).toString()));
+                case "competing" -> activities.add(Activity.competing(arr.get(i).toString()));
+                case "streaming" -> activities.add(Activity.streaming(arr.get(i).toString(), ""));
+            }
     }
 
     private static Activity randomActivity()
