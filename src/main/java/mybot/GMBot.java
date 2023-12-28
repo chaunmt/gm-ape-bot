@@ -59,9 +59,9 @@ public class GMBot implements EventListener
             else if (type.equals("playing"))
                 activities.add(Activity.playing(arr.get(i).toString()));
             else if (type.equals("listening"))
-                activities.add(Activity.playing(arr.get(i).toString()));
+                activities.add(Activity.listening(arr.get(i).toString()));
             else if (type.equals("competing"))
-                activities.add(Activity.playing(arr.get(i).toString()));
+                activities.add(Activity.competing(arr.get(i).toString()));
             else if (type.equals("streaming"))
                 activities.add(Activity.streaming(arr.get(i).toString(), ""));
     }
