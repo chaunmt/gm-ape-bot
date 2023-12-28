@@ -10,7 +10,7 @@ public class MessageHandler extends ListenerAdapter
     public void onMessageReceived(MessageReceivedEvent event)
     {
         String msg = event.getMessage().getContentDisplay();
-        if (msg.toLowerCase().contains("@GM Ape is it true that"))
+        if (msg.toLowerCase().contains("@gm ape is it true that"))
         {
             event.getChannel().sendMessage(RandomGenerator.getYesNo(100))
                     .setMessageReference(event.getMessageId()).queue();

@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="divide classes into smaller classes">
-      <change afterPath="$PROJECT_DIR$/data/activities.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/emojis.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/games.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mybot/exapi/DadJoke.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mybot/helper/JSONHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mybot/helper/RandomGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/valheim.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/valheim.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/GMBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/GMBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/RandomGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mainFile/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703619385036</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="divide classes into smaller classes">
+      <created>1703669481678</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1703669481678</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
