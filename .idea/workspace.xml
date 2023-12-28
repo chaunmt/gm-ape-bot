@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="divide classes into smaller classes">
+    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="change if to switch to improve look">
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Activities.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Emojis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Games.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/data/Valheim.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/valheim.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/valheim.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +209,28 @@
       <option name="project" value="LOCAL" />
       <updated>1703669481678</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fix lowercase issue in MessageHandler">
+      <created>1703755062911</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1703755062911</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix wrong activity type">
+      <created>1703761155680</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1703761155680</updated>
+    </task>
+    <task id="LOCAL-00020" summary="change if to switch to improve look">
+      <created>1703761222311</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1703761222311</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +261,9 @@
     <MESSAGE value="gm ape can now be built in terminal" />
     <MESSAGE value="update README.md" />
     <MESSAGE value="divide classes into smaller classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="divide classes into smaller classes" />
+    <MESSAGE value="fix lowercase issue in MessageHandler" />
+    <MESSAGE value="fix wrong activity type" />
+    <MESSAGE value="change if to switch to improve look" />
+    <option name="LAST_COMMIT_MESSAGE" value="change if to switch to improve look" />
   </component>
 </project>

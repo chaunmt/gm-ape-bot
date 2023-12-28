@@ -1,5 +1,7 @@
 package mybot;
 
+import data.Games;
+import data.Valheim;
 import io.github.cdimascio.dotenv.Dotenv;
 import mybot.exapi.DadJoke;
 import mybot.helper.JSONHandler;
@@ -87,7 +89,8 @@ public class SlashCommandHandler extends ListenerAdapter
                 }
             }
             case "valheim" ->
-                    event.reply(getModString("data/valheim.json")).queue();
+//                    event.reply(getModString("data/valheim.json")).queue();
+                    event.reply(Games.VALHEIM).queue();
             case "greenhell" ->
                     event.reply("Apes will go to green hell soon!").queue();
             case "dadjoke" ->
@@ -116,7 +119,7 @@ public class SlashCommandHandler extends ListenerAdapter
 
     private void generatePoll(SlashCommandInteractionEvent event)
     {
-        event.deferReply().queue();
+//        event.deferReply().queue();
 
         String question = event.getOptionsByName("question").get(0).getAsString();
         String choices;
