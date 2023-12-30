@@ -35,7 +35,7 @@ public class Emojis {
                     "<:xiao_deadinside:1007609464758743204>"
             };
 
-    public static final String[][] CODE_HAND =
+    public static final String[][] CODE_HAND =      // Code in Discord and Unicode
             {
                     {
                             ":thumbsup:",
@@ -47,7 +47,7 @@ public class Emojis {
                     }
             };
 
-    public static final String[][] CODE_NUMBER =
+    public static final String[][] CODE_NUMBER =    // Code in Discord and Unicode
             {
                     {
                             ":one:",

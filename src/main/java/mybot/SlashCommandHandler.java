@@ -1,7 +1,5 @@
 package mybot;
 
-import data.Games;
-import data.Valheim;
 import io.github.cdimascio.dotenv.Dotenv;
 import mybot.exapi.DadJoke;
 import mybot.helper.JSONHandler;
@@ -26,14 +24,7 @@ public class SlashCommandHandler extends ListenerAdapter
         Dotenv dotenv = Dotenv.load();                                  // Load API
         String THE_APES_GUILD_ID = dotenv.get("THE_APES_GUILD_ID");
 
-//        // Delete old global commands
-//        event.getJDA()
-//                .updateCommands()
-//                .queue();
-//        // Delete old guild commands
-//        Objects.requireNonNull(event.getJDA().getGuildById("884490415208804392"))
-//                .updateCommands()
-//                .queue();
+//        deleteOldCommands(event);
 
         // Update guild commands
         Objects.requireNonNull(event.getJDA().getGuildById(THE_APES_GUILD_ID))
@@ -54,11 +45,20 @@ public class SlashCommandHandler extends ListenerAdapter
                                 .addOption(OptionType.STRING, "choices",
                                         "give it choices separated by a comma", false),
                         Commands.slash("donate", "buy me a coffee")
-                                .addOption(OptionType.BOOLEAN, "katsu",
-                                        "buy katsu a coffee", false)
-                                .addOption(OptionType.BOOLEAN, "levan",
-                                        "buy levan a coffee", false)
                 )
+                .queue();
+    }
+
+    private static void deleteOldCommands(SlashCommandInteractionEvent event)
+    {
+        // Delete old global commands
+        event.getJDA()
+                .updateCommands()
+                .queue();
+
+        // Delete old guild commands
+        Objects.requireNonNull(event.getJDA().getGuildById("884490415208804392"))
+                .updateCommands()
                 .queue();
     }
 
@@ -67,30 +67,15 @@ public class SlashCommandHandler extends ListenerAdapter
     {
         switch (event.getName()) {
             case "hello" ->
-                    event.reply(getRandomString("data/emojis.json", new String[]{"fun"})).queue();
+                    event.reply(RandomGenerator.getString("data/emojis.json", new String[]{"fun"})).queue();
             case "goodbye" ->
-                    event.reply(getRandomString("data/emojis.json", new String[]{"sad"})).queue();
+                    event.reply(RandomGenerator.getString("data/emojis.json", new String[]{"sad"})).queue();
             case "ping" ->
                     event.reply(event.getJDA().getGatewayPing() + " ms da").queue();
             case "game" ->
-            {
-                ArrayList<String> games = JSONHandler.getArr("data/games.json", new String[]{"games"});
-                if (event.getOptionsByName("random").get(0).getAsBoolean())
-                {
-                    event.reply(games.get(RandomGenerator.getInt(games.size()))).queue();
-                }
-                else
-                {
-                    StringBuilder rep = new StringBuilder();
-                    for (int i = 0; i < games.size(); i++)
-                        rep.append(i).append(". ")
-                                .append(games.get(i)).append("\n");
-                    event.reply(rep.toString()).queue();
-                }
-            }
+                    getAllGamesOrRandomGame(event);
             case "valheim" ->
-//                    event.reply(getModString("data/valheim.json")).queue();
-                    event.reply(Games.VALHEIM).queue();
+                    event.reply(getModString("data/valheim.json")).queue();
             case "greenhell" ->
                     event.reply("Apes will go to green hell soon!").queue();
             case "dadjoke" ->
@@ -99,7 +84,7 @@ public class SlashCommandHandler extends ListenerAdapter
                 {
                     event.reply(DadJoke.reader()).queue();
                     event.getHook().sendMessage(
-                            getRandomString("data/emojis.json", new String[]{"fun"})
+                            RandomGenerator.getString("data/emojis.json", new String[]{"fun"})
                     ).queue();
                 }
                 catch (IOException e)
@@ -111,15 +96,35 @@ public class SlashCommandHandler extends ListenerAdapter
             case "poll" ->
                     generatePoll(event);
             case "donate" ->
-                    generateDonateMsg(event);
+                    event.reply(String.valueOf(
+                            "https://www.buymeacoffee.com/kittokatsu\n" +
+                            "https://www.buymeacoffee.com/syukurm")).queue();
             default ->
                     event.reply("Me don't know that").queue();
         }
     }
 
+    private void getAllGamesOrRandomGame(SlashCommandInteractionEvent event)
+    {
+        ArrayList<String> games = JSONHandler.getArr("data/games.json", new String[]{"games"});
+        // Get a random game
+        if (event.getOptionsByName("random").get(0).getAsBoolean())
+        {
+            event.reply(games.get(RandomGenerator.getInt(games.size()))).queue();
+        }
+        else
+        // Get all games
+        {
+            StringBuilder rep = new StringBuilder();
+            for (int i = 0; i < games.size(); i++)
+                rep.append(i).append(". ")
+                        .append(games.get(i)).append("\n");
+            event.reply(rep.toString()).queue();
+        }
+    }
     private void generatePoll(SlashCommandInteractionEvent event)
     {
-//        event.deferReply().queue();
+        event.deferReply().queue();
 
         String question = event.getOptionsByName("question").get(0).getAsString();
         String choices;
@@ -168,42 +173,15 @@ public class SlashCommandHandler extends ListenerAdapter
             event.getHook().sendMessage("That's too many choices, narrow it down").queue();
     }
 
-    private void generateDonateMsg(SlashCommandInteractionEvent event)
-    {
-        StringBuilder donateMsg = new StringBuilder();
-        if (event.getOptionsByName("katsu").size() == 0 && event.getOptionsByName("levan").size() == 0)
-        {
-            event.reply("https://www.buymeacoffee.com").queue();
-        }
-        else {
-            if (event.getOptionsByName("katsu").size() > 0) {
-                if (event.getOptionsByName("katsu").get(0).getAsBoolean())
-                    donateMsg.append("https://www.buymeacoffee.com/kittokatsu\n");
-                else
-                    donateMsg.append("no coffee for katsu\n");
-            }
-            if (event.getOptionsByName("levan").size() > 0) {
-                if (event.getOptionsByName("levan").get(0).getAsBoolean())
-                    donateMsg.append("https://www.buymeacoffee.com/syukurm\n");
-                else
-                    donateMsg.append("no coffee for levan\n");
-            }
-            event.reply(String.valueOf(donateMsg)).queue();
-        }
-    }
 
-    public String getRandomString(String link, String[] keys)
-    {
-        ArrayList<String> emoji = JSONHandler.getArr(link, keys);
-        return emoji.get(RandomGenerator.getInt(emoji.size()));
-    }
 
     private String getModString(String link)
     {
-        return "Valheim IP: apegm.datho.st:21831\n"
-                + "Password: Woow00kek\n"
-                + "(Steam IP: apegm.datho.st:21832)\n\n"
-                + "Required mods:\n"
+        return "Server info:\n"
+                + "> Valheim IP: apegm.datho.st:21831\n"
+                + "> Password: Woow00kek\n"
+                + "> (Steam IP: apegm.datho.st:21832)\n"
+                + "\nRequired mods:\n"
                 + getModString(link, new String[]{"mods", "required"})
                 + "\nSuggested mods:\n"
                 + getModString(link, new String[]{"mods", "suggested"})

@@ -35,7 +35,6 @@ public class Games {
             + "4. [AAA_Crafting - Azumatt (tested)]" +
             "(<https://valheim.thunderstore.io/package/Azumatt/AAA_Crafting//>)\n"
 
-
             + "\nStopped working mods:\n"
             + "1. [AutoFeed - ALY (tested)]" +
             "(<https://valheim.thunderstore.io/package/ALY/AutoFeed/>)\n"
