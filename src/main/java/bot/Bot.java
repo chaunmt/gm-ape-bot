@@ -1,11 +1,11 @@
-package mybot;
+package bot;
 
-import mybot.helper.JSONHandler;
-import mybot.helper.RandomGenerator;
+import bot.helpers.JSONHandler;
+import bot.helpers.RandomGenerator;
+import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 
-import io.github.cdimascio.dotenv.Dotenv;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import org.json.JSONArray;
@@ -13,7 +13,7 @@ import org.json.JSONObject;
 
 import java.util.*;
 
-public class GMBot implements EventListener
+public class Bot implements EventListener
 {
     public static void main(String[] args)
             throws InterruptedException
@@ -51,8 +51,7 @@ public class GMBot implements EventListener
 
     private static void addActivitiesWithType(JSONObject obj, String type)
     {
-        JSONArray arr = null;
-        arr = JSONHandler.getJSONArr(obj, new String[]{type});
+        JSONArray arr = JSONHandler.getJSONArr(obj, new String[]{type});
         for (int i = 0; i < arr.length(); i++)
             switch (type) {
                 case "watching" -> activities.add(Activity.watching(arr.get(i).toString()));

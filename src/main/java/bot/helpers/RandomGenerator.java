@@ -1,4 +1,4 @@
-package mybot.helper;
+package bot.helpers;
 
 import java.util.ArrayList;
 import java.util.Random;

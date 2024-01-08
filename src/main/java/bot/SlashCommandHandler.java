@@ -1,9 +1,9 @@
-package mybot;
+package bot;
 
 import io.github.cdimascio.dotenv.Dotenv;
-import mybot.exapi.DadJoke;
-import mybot.helper.JSONHandler;
-import mybot.helper.RandomGenerator;
+import bot.exapi.DadJoke;
+import bot.helpers.JSONHandler;
+import bot.helpers.RandomGenerator;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.interaction.command.SlashCommandInteractionEvent;
@@ -98,7 +98,7 @@ public class SlashCommandHandler extends ListenerAdapter
             case "donate" ->
                     event.reply(String.valueOf(
                             "https://www.buymeacoffee.com/kittokatsu\n" +
-                            "https://www.buymeacoffee.com/syukurm")).queue();
+                                    "https://www.buymeacoffee.com/syukurm")).queue();
             default ->
                     event.reply("Me don't know that").queue();
         }

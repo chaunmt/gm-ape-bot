@@ -1,4 +1,4 @@
-package mybot.helper;
+package bot.helpers;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

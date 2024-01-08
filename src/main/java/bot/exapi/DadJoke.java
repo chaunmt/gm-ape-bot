@@ -1,4 +1,4 @@
-package mybot.exapi;
+package bot.exapi;
 
 import java.io.BufferedReader;
 import java.io.IOException;

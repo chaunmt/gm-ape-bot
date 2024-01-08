@@ -1,6 +1,6 @@
-package mybot;
+package bot;
 
-import mybot.helper.RandomGenerator;
+import bot.helpers.RandomGenerator;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 
@@ -18,7 +18,7 @@ public class MessageHandler extends ListenerAdapter
                         .setMessageReference(event.getMessageId()).queue();
             } else
                 event.getChannel().sendMessage(
-                        RandomGenerator.getString("data/replies.json", new String[]{"mention"}))
+                                RandomGenerator.getString("data/replies.json", new String[]{"mention"}))
                         .setMessageReference(event.getMessageId()).queue();
         }
     }
