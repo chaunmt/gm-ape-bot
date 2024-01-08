@@ -4,18 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="add some array data for testing">
-      <change afterPath="$PROJECT_DIR$/data/replies.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/data/Replies.java" afterDir="false" />
+    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="moving back to json and add more reactions">
+      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/activities.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/activities.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/emojis.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/emojis.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Activities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Activities.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Emojis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Emojis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Games.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/data/Games.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/helper/RandomGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mybot/helper/RandomGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -241,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703761350688</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="moving back to json and add more reactions">
+      <created>1703968732761</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1703968732761</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +279,7 @@
     <MESSAGE value="fix wrong activity type" />
     <MESSAGE value="change if to switch to improve look" />
     <MESSAGE value="add some array data for testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="add some array data for testing" />
+    <MESSAGE value="moving back to json and add more reactions" />
+    <option name="LAST_COMMIT_MESSAGE" value="moving back to json and add more reactions" />
   </component>
 </project>
