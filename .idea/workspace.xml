@@ -5,40 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/apache_maven_plugins_shade_plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/codehaus_mojo_exec_maven_plugin.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/googlecode_json_simple.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/json.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/chaunmt/gmapebot/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/chaunmt/gmapebot/events/SlashCommandInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/chaunmt/gmapebot/utils/RandomGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/valheim.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/valheim.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dependency-reduced-pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Activities.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Emojis.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Games.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Replies.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/data/Valheim.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/GMBot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/MessageHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/SlashCommandHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/exapi/DadJoke.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/helper/JSONHandler.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mybot/helper/RandomGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/activities.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/emojis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/games.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/replies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/valheim.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/MessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/SlashCommandHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/exapi/DadJoke.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/helpers/JSONHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/helpers/RandomGenerator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,23 +40,7 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="gm-ape-bot" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="gm-ape-bot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="gm-ape-bot" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="shadow" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
@@ -91,6 +57,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -102,32 +71,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Gradle.gm-ape-bot [:Bot.main()].executor": "Run",
-    "Gradle.gm-ape-bot [shadowJar].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "gradle",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/syukurm/Documents/Projects/gm-ape-bot",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.gm-ape-bot [:Bot.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.gm-ape-bot [shadowJar].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gradle&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/syukurm/Documents/Projects/gm-ape-bot&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.gm-ape-bot [shadowJar]">
+  <component name="RunManager" selected="Application.me.chaunmt.gmapebot.Bot">
     <configuration name="Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.discordbot.Bot" />
       <module name="gm-ape-bot.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="bot.Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bot.Bot" />
+      <module name="gm-ape-bot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="me.chaunmt.gmapebot.Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.chaunmt.gmapebot.Bot" />
+      <module name="gm-ape-bot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.chaunmt.gmapebot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,7 +151,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.me.chaunmt.gmapebot.Bot" />
         <item itemvalue="Gradle.gm-ape-bot [shadowJar]" />
+        <item itemvalue="Application.bot.Bot" />
         <item itemvalue="Application.Bot" />
       </list>
     </recent_temporary>

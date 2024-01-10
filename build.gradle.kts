@@ -4,19 +4,17 @@ plugins {
 }
 
 
-application.mainClass = "bot.Bot"
-group = "me.chaunmt.gm-ape-bot"
-version = "1.0.0-alpha"
+application.mainClass = "me.chaunmt.gmapebot.Bot"
+group = "me.chaunmt.gmapebot"
+version = "1.0.0-alpha.1"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation("net.dv8tion:JDA:5.0.0-beta.13")
+    implementation("net.dv8tion:JDA:5.0.0-beta.19")
     implementation("io.github.cdimascio:dotenv-java:3.0.0")
-    implementation("org.json:json:20231013")
-    implementation("com.googlecode.json-simple:json-simple:1.1.1")
 }
 
 tasks.withType<JavaCompile> {
