@@ -4,19 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="moving back to json and add more reactions">
-      <change afterPath="$PROJECT_DIR$/dependency-reduced-pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+    <list default="true" id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/chaunmt/gmapebot/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/chaunmt/gmapebot/events/SlashCommandInteractionListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/me/chaunmt/gmapebot/utils/RandomGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/activities.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/emojis.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/games.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/replies.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/valheim.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/Bot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/MessageHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/SlashCommandHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/exapi/DadJoke.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/helpers/JSONHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bot/helpers/RandomGenerator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -31,255 +60,125 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2VYoQL8zHsGNdT1WlsuiBWrwnQt" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2afGKh1y24pax31N2oC9u67GGrO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.gm-ape-bot [:Bot.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.gm-ape-bot [shadowJar].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Projects/gm-ape-bot&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;gradle&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/syukurm/Documents/Projects/gm-ape-bot&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
 }</component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\gm-ape-bot" />
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GMBot">
-    <configuration name="GMBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="mybot.GMBot" />
-      <module name="gm-ape-bot" />
+  <component name="RunManager" selected="Application.me.chaunmt.gmapebot.Bot">
+    <configuration name="Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.discordbot.Bot" />
+      <module name="gm-ape-bot.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in gm-ape-bot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="gm-ape-bot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+    <configuration name="bot.Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="bot.Bot" />
+      <module name="gm-ape-bot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="bot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="me.chaunmt.gmapebot.Bot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.chaunmt.gmapebot.Bot" />
+      <module name="gm-ape-bot.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="me.chaunmt.gmapebot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="gm-ape-bot [shadowJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="shadowJar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GMBot" />
-        <item itemvalue="JUnit.All in gm-ape-bot" />
+        <item itemvalue="Application.me.chaunmt.gmapebot.Bot" />
+        <item itemvalue="Gradle.gm-ape-bot [shadowJar]" />
+        <item itemvalue="Application.bot.Bot" />
+        <item itemvalue="Application.Bot" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-f644763e9732-76dd8dae" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="eb4e2e2d-6f3d-470d-ac02-f2014d306c77" name="Changes" comment="" />
-      <created>1695022359037</created>
+      <changelist id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="" />
+      <created>1704702179261</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1695022359037</updated>
+      <updated>1704702179261</updated>
     </task>
-    <task id="LOCAL-00001" summary="eat banana and do no command">
-      <created>1695446348519</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1695446348519</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fix ping and add random activity every hour">
-      <created>1703476272154</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1703476272154</updated>
-    </task>
-    <task id="LOCAL-00003" summary="modify activity">
-      <created>1703476560649</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1703476560649</updated>
-    </task>
-    <task id="LOCAL-00004" summary="slash command working: ping, mods">
-      <created>1703495750817</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1703495750817</updated>
-    </task>
-    <task id="LOCAL-00005" summary="random game slash command">
-      <created>1703502019186</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1703502019186</updated>
-    </task>
-    <task id="LOCAL-00006" summary="GM Ape can do dad joke now">
-      <created>1703561460458</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1703561460458</updated>
-    </task>
-    <task id="LOCAL-00007" summary="gm ape can send big emoji">
-      <created>1703569506093</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1703569506093</updated>
-    </task>
-    <task id="LOCAL-00008" summary="fix some small typo">
-      <created>1703569553807</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1703569553807</updated>
-    </task>
-    <task id="LOCAL-00009" summary="ape can do simple poll">
-      <created>1703575382823</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1703575382823</updated>
-    </task>
-    <task id="LOCAL-00010" summary="ape can reply to mention and &quot;is it true that&quot;">
-      <created>1703579770631</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1703579770631</updated>
-    </task>
-    <task id="LOCAL-00011" summary="buy me a coffee ape">
-      <created>1703582138796</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1703582138796</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fix redundant assign">
-      <created>1703582170887</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1703582170887</updated>
-    </task>
-    <task id="LOCAL-00013" summary="levan can have coffee now">
-      <created>1703584627354</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1703584627354</updated>
-    </task>
-    <task id="LOCAL-00014" summary="gm ape can now be built in terminal">
-      <created>1703612257424</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1703612257424</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update README.md">
-      <created>1703613090244</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1703613090244</updated>
-    </task>
-    <task id="LOCAL-00016" summary="update README.md">
-      <created>1703619385036</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1703619385036</updated>
-    </task>
-    <task id="LOCAL-00017" summary="divide classes into smaller classes">
-      <created>1703669481678</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1703669481678</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fix lowercase issue in MessageHandler">
-      <created>1703755062911</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1703755062911</updated>
-    </task>
-    <task id="LOCAL-00019" summary="fix wrong activity type">
-      <created>1703761155680</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1703761155680</updated>
-    </task>
-    <task id="LOCAL-00020" summary="change if to switch to improve look">
-      <created>1703761222311</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1703761222311</updated>
-    </task>
-    <task id="LOCAL-00021" summary="add some array data for testing">
-      <created>1703761350688</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1703761350688</updated>
-    </task>
-    <task id="LOCAL-00022" summary="moving back to json and add more reactions">
-      <created>1703968732761</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1703968732761</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="eat banana and do no command" />
-    <MESSAGE value="fix ping and add random activity every hour" />
-    <MESSAGE value="modify activity" />
-    <MESSAGE value="slash command working: ping, mods" />
-    <MESSAGE value="random game slash command" />
-    <MESSAGE value="GM Ape can do dad joke now" />
-    <MESSAGE value="gm ape can send big emoji" />
-    <MESSAGE value="fix some small typo" />
-    <MESSAGE value="ape can do simple poll" />
-    <MESSAGE value="ape can reply to mention and &quot;is it true that&quot;" />
-    <MESSAGE value="buy me a coffee ape" />
-    <MESSAGE value="fix redundant assign" />
-    <MESSAGE value="levan can have coffee now" />
-    <MESSAGE value="gm ape can now be built in terminal" />
-    <MESSAGE value="update README.md" />
-    <MESSAGE value="divide classes into smaller classes" />
-    <MESSAGE value="fix lowercase issue in MessageHandler" />
-    <MESSAGE value="fix wrong activity type" />
-    <MESSAGE value="change if to switch to improve look" />
-    <MESSAGE value="add some array data for testing" />
-    <MESSAGE value="moving back to json and add more reactions" />
-    <option name="LAST_COMMIT_MESSAGE" value="moving back to json and add more reactions" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
   </component>
 </project>
