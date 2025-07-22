@@ -1,5 +1,5 @@
 # ─── BUILD STAGE ───────────────────────────────────────────────────────────────
-FROM gradle:8.3-jdk17 AS build
+FROM --platform=linux/amd64 gradle:8.3-jdk17 AS build
 WORKDIR /workspace
 COPY . .
 RUN gradle clean build --no-daemon -x test
