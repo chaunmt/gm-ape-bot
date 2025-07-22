@@ -20,12 +20,9 @@ Game Master Ape is here for immediate forest's response (while he's online).
 
 ## ✈️ How to run
 ```
-mvn clean install
-mvn exec:java
+./gradlew build
+./gradlew run
 ```
-
-Note: maven compiler source and target in pom.xml can be changed into other jdk version as need.
-
 ## 📍 Require
 + Discord API Key.
 + Discord Guild ID.

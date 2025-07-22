@@ -1,10 +1,12 @@
 pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
     plugins {
         kotlin("jvm") version "1.9.22"
+        id("com.github.johnrengelman.shadow") version "8.1.1"
     }
 }
-plugins {
-    id("org.gradle.toolchains.foojay-resolver-convention") version "0.5.0"
-}
-rootProject.name = "gm-ape-bot"
 
+rootProject.name = "gm-ape-bot"
