@@ -6,7 +6,7 @@ COPY . .
 RUN gradle clean build --no-daemon -x test
 
 # ─── RUNTIME STAGE ─────────────────────────────────────────────────────────────
-FROM openjdk:17-jre-alpine
+FROM openjdk:17-alpine
 WORKDIR /app
 
 COPY --from=build /workspace/build/libs/*-all.jar ./bot.jar
