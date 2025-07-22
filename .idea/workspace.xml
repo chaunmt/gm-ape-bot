@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="remove manual docker publish yml">
-      <change beforePath="$PROJECT_DIR$/docker-publish.yml" beforeDir="false" />
+    <list default="true" id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="edit .env.example">
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "chaunmt"
+  }
+}]]></component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/chaunmt/gm-ape-bot.git",
@@ -169,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1753173759993</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="remove manual docker publish yml">
+      <option name="closed" value="true" />
+      <created>1753173962956</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1753173962956</updated>
+    </task>
+    <task id="LOCAL-00003" summary="remove manual docker publish yml">
+      <option name="closed" value="true" />
+      <created>1753174031733</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1753174031733</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +212,7 @@
     </ignored-roots>
     <MESSAGE value="docker" />
     <MESSAGE value="remove manual docker publish yml" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove manual docker publish yml" />
+    <MESSAGE value="edit .env.example" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit .env.example" />
   </component>
 </project>
