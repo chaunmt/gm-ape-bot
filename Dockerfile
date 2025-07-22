@@ -9,6 +9,5 @@ FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 COPY --from=build /workspace/build/libs/*-all.jar ./bot.jar
-COPY .env .env
 
 ENTRYPOINT ["java","-jar","bot.jar"]
