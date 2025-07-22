@@ -1,11 +1,12 @@
 # ─── BUILD STAGE ───────────────────────────────────────────────────────────────
-FROM --platform=linux/amd64 gradle:8.3-jdk17 AS build
+ARG BUILDPLATFORM
+FROM --platform=$BUILDPLATFORM openjdk:17-jdk-alpine AS build
 WORKDIR /workspace
 COPY . .
 RUN gradle clean build --no-daemon -x test
 
 # ─── RUNTIME STAGE ─────────────────────────────────────────────────────────────
-FROM eclipse-temurin:17-jre
+FROM openjdk:17-jre-alpine
 WORKDIR /app
 
 COPY --from=build /workspace/build/libs/*-all.jar ./bot.jar
