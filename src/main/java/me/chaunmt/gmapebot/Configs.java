@@ -11,7 +11,7 @@ public final class Configs {
 
     // Helper that pulls from DOTENV first, then System.getenv(), and throws if null/empty
     private static String require(String key) {
-        String val = DOTENV.get(key, System.getenv("IMAGE_NAME"));
+        String val = dotenv.get(key, System.getenv("IMAGE_NAME"));
         if (val == null || val.isBlank()) {
             throw new IllegalStateException(
                     "Missing required environment variable: " + key
@@ -21,7 +21,6 @@ public final class Configs {
     }
 
     // Reads from the .env or, if missing, from the real env
-    public static final String IMAGE_NAME = require("IMAGE_NAME");
     public static final String BOT_TOKEN = require("BOT_TOKEN");
     public static final String THE_APES_GUILD_ID = require("THE_APES_GUILD_ID");
 
