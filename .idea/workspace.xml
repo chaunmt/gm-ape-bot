@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="edit .env.example" />
+    <list default="true" id="fd211818-45c0-40f7-a526-9b42e4556dd9" name="Changes" comment="add platform">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +192,31 @@
       <option name="project" value="LOCAL" />
       <updated>1753174031733</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change docker jre">
+      <option name="closed" value="true" />
+      <created>1753175190901</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1753175190901</updated>
+    </task>
+    <task id="LOCAL-00005" summary="remove .env required at docker img">
+      <option name="closed" value="true" />
+      <created>1753175320390</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1753175320390</updated>
+    </task>
+    <task id="LOCAL-00006" summary="add platform">
+      <option name="closed" value="true" />
+      <created>1753175599940</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1753175599940</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +237,9 @@
     <MESSAGE value="docker" />
     <MESSAGE value="remove manual docker publish yml" />
     <MESSAGE value="edit .env.example" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit .env.example" />
+    <MESSAGE value="change docker jre" />
+    <MESSAGE value="remove .env required at docker img" />
+    <MESSAGE value="add platform" />
+    <option name="LAST_COMMIT_MESSAGE" value="add platform" />
   </component>
 </project>
