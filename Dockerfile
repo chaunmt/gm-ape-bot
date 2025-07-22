@@ -5,7 +5,7 @@ COPY . .
 RUN gradle clean build --no-daemon -x test
 
 # ─── RUNTIME STAGE ─────────────────────────────────────────────────────────────
-FROM eclipse-temurin:17-jre-alpine
+FROM eclipse-temurin:17-jre
 WORKDIR /app
 
 COPY --from=build /workspace/build/libs/*-all.jar ./bot.jar
